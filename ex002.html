@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang ="pt-BR">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Incorporando Javascript em Páginas HTML</title>
+</head>   
+<body>
+
+    <div id="exibe_resultado"> Resultado da Multiplicação: </div>
+
+</body>
+<script type="text/javascript">
+    var numero1 = prompt("Insira o primeiro número: ");
+    var numero2 = prompt("Insira o segundo número: ");
+    var resultadoMultiplicacao = multiplique(numero1, numero2);
+    var divLocal = document.getElementById("exibe_resultado");
+    divLocal.innerHTML += resultadoMultiplicacao;
+
+    function multiplique(numero1, numero2){
+        var resultado = 0;
+        resultado = numero1 *numero2;
+        return resultado;
+    }
+
+</script>
+</html>
