@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+    var altura = parseFloat(prompt("Insira sua altura: ").replace(",", "."));
+    var peso = parseFloat(prompt("Insira seu peso: ").replace(",", "."));
+    var resultado = imc(altura, peso)
+
+    if(resultado < 18.5) {
+        alert("Seu imc é: " + resultado.toFixed(2) + " Voce está abaixo do peso !");
+    } else if (resultado < 25) {
+        alert("Seu imc é: " + resultado.toFixed(2) + " Parabens voce esta no peso ideal !");
+    } else if (resultado < 30) {
+        alert("Seu imc é: " + resultado.toFixed(2) + " Voce esta levemente acima do peso");
+    } else if (resultado < 35) {
+        alert("Seu imc é: " + resultado.toFixed(2) + " Voce esta obeso, procure um médico para evitar doenças futuras.")
+    }
+
+
+
+    function imc(altura, peso){
+        var resultado = 0;
+        resultado = peso / (altura*altura);
+        return resultado
+    }
+
+
+</script>
+</html>
